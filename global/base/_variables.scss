@@ -1,0 +1,113 @@
+$xxxs: 320px;
+$xxs: 445px;
+$xs: 620px;
+$s: 768px;
+$ms: 840px;
+$m: 1000px;
+$ml: 1160px;
+$l: 1200px;
+$xl: 1440px;
+$xxl: 1600px;
+
+$xxs-max: 444px;
+$xs-max: 619px;
+$s-max: 767px;
+$m-max: 999px;
+$l-max: 1199px;
+
+$moblie: 375px;
+$desktop: 1920px;
+
+// Fonts
+@import url('https://fonts.googleapis.com/css2?family=Barlow:wght@400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap');
+
+$f-primary: 'Barlow';
+$f-landing: 'Great Vibes', cursive;;
+
+// Primary colors 
+$c-black: #1a1a1a; 
+$c-second: #F2F3F8;
+
+// Text color;
+$c-black: #303439;
+$c-gray: #A7AEB8;
+$c-white-1: #FFFFFF;
+
+// Màu nhấn
+$c-primary : #00AEEF;
+$c-primary-1 : #12BFFF;
+$c-primary-2 : #E2F4FB;
+$c-primary-3 : #02A4E1;
+
+$c-orange : #F07C00;
+$c-orange-1 : #FF8C11;
+$c-orange-2 : #E2F4FB;
+$c-orange-3 : #E47600;
+
+// Line color
+$c-gray-1: #DFE3EB;
+$c-gray-2: #ADB1B2;
+
+// Acent color;
+$c-red: #EC1929;
+$c-red-1: #F8E3E4;
+$c-blue: #0A69D2;
+$c-blue-1: #CBD5E1;
+$c-green: #35DB7B;
+$c-green-1: #E9FFF2;
+$c-purple: #7E52FF;
+$c-purple-1: #E6E2F8;
+$c-yellow: #FFD02B;
+$c-yellow-1: #FFFCF2;
+$c-pink: #D92B6A;
+$c-pink-1: #FBE6ED;
+
+
+$c-black-50: rgba($c-black, 0.5);
+$c-white: #fff;
+$c-brown: #6F382B;
+$c-brown-1: #F1ECEA;
+//$c-red: red;
+//$c-red-1: #FFE5E5;
+$c-lblue: #E8F0F7;
+$c-dblue: #385d7f;
+$c-dblue-2: #193263;
+$c-gray: #686869;
+
+
+$c-gray-4: #F5F6FA;
+$c-gray-5: #C7C9D9;
+$c-beige: #EDE6DF;
+$c-yellow: #FFDC00;
+$c-border-gray: lighten($c-gray, 40%);
+$c-outline: #212121;
+$c-kumera: #7F6324;
+$c-yellow-2: #FDCC72;
+$c-light-gray: #F2F3F8;
+$c-dark-gray: #757575;
+
+$c-border: #D9DDE8;
+$border: 1px solid $c-border;
+$c-border-white: 1px solid rgba($c-white, 1);
+
+/* Transitions */
+$duration: 0.25s;
+$speed: 0.2s;
+$ease: ease-in-out;
+$ease-out-quart: cubic-bezier(0.165, 0.84, 0.44, 1);
+
+$transition-default: $duration $ease;
+
+// Layout
+$edge-gutter: 20px;
+$edge-gutter-s: 40px;
+$edge-gutter-m: 80px;
+
+/* Gutters */
+$gutter-xxs: 20px;
+$gutter-ms: 20px;
+$gutter-s: 25px;
+$gutter-m: 20px;
+$gutter-l: 40px;
+$gutter: 40px;

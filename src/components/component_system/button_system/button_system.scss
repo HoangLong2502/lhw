@@ -1,0 +1,23 @@
+@import '../../../../global/base/variables';
+
+.button__item-blue {
+    background-color: $c-primary;
+    color: $c-white-1;
+    transition: 0.1s;
+
+    &:hover {
+        background-color: $c-primary-1;
+    }
+
+    &:after {
+        background-color: $c-primary-3;
+    }
+
+    &:active {
+        background-color: $c-primary-3;
+    }
+}
+
+.button__item-extra {
+    border: 1px solid $c-border;
+}
