@@ -1,11 +1,18 @@
 input, select {
   color: $c-black;
-  border: 1px solid $c-border;
-  padding: 0.75em 1em;
-  border-radius: 8px;
+  width: 100%;
+  border: 1px solid $c-border !important;
+  padding: 12px !important;
+  height: fit-content !important;
+  border-radius: 8px !important;
   background-color: $c-white;
-  @extend .h6;
+  transition: 0.4s;
+  @extend .p6;
   
+}
+
+input:focus {
+  border: 1px solid $c-blue !important;
 }
 
 .text-input__readonly {
@@ -58,18 +65,18 @@ input, select {
 }
 
 .text-input--search {
+  position: relative;
   .text-input__el {
-    padding: 12px 12px 12px 38px;
+    padding: 12px 12px 12px 38px !important;
+    border-radius: 8px;
   }
 }
 
 .text-input__icon {
   display: block;
   position: absolute;
-  top: 14px;
-  left: 12px;
-  width: 15px;
-  height: 15px;
+  top: 10px;
+  left: 14px;
 
   svg {
     width: 15px;

@@ -37,12 +37,12 @@ $c-white-1: #FFFFFF;
 // Màu nhấn
 $c-primary : #00AEEF;
 $c-primary-1 : #12BFFF;
-$c-primary-2 : #E2F4FB;
+$c-primary-2 : #96DBF6;
 $c-primary-3 : #02A4E1;
 
 $c-orange : #F07C00;
 $c-orange-1 : #FF8C11;
-$c-orange-2 : #E2F4FB;
+$c-orange-2 : #F7C998;
 $c-orange-3 : #E47600;
 
 // Line color
@@ -63,6 +63,11 @@ $c-yellow-1: #FFFCF2;
 $c-pink: #D92B6A;
 $c-pink-1: #FBE6ED;
 
+// gray-color
+$c-gray-3: #686868;
+$c-gray-4: #959393;
+$c-gray-5: #0A0909;
+
 
 $c-black-50: rgba($c-black, 0.5);
 $c-white: #fff;
@@ -75,9 +80,6 @@ $c-dblue: #385d7f;
 $c-dblue-2: #193263;
 $c-gray: #686869;
 
-
-$c-gray-4: #F5F6FA;
-$c-gray-5: #C7C9D9;
 $c-beige: #EDE6DF;
 $c-yellow: #FFDC00;
 $c-border-gray: lighten($c-gray, 40%);
