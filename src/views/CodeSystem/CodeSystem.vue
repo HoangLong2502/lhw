@@ -101,12 +101,30 @@
             <div class="f fdc ais pl2 pr2 w100" style="gap: 0.25em">
                 <label for="">Mặc định (Logo)</label>
                 <InputSystem 
+                    :v-model="foo" 
+                    @update="foo = $event"
                     :logoInput="true"/>
+            </div>
+            <div class="f fdc ais pl2 pr2 w100" style="gap: 0.25em">
+                <label for="">Mặc định (bắt buộc) <span class="orange">*</span></label>
+                <InputSystem 
+                    :v-model="foo" 
+                    @update="foo = $event"
+                    :logoInput="true"
+                    :requireInput="true"/>
             </div>
             <div class="f fdc ais pl2 pr2 w100" style="gap: 0.25em">
                 <label for="">Định dạng tiền tệ</label>
                 <InputSystem 
-                    typeInput='number'/>
+                    typeInput='money'/>
+            </div>
+        </div>
+        
+        <!-- Select -->
+        <div>
+            <div class="f fdc ais pl2 pr2 w100" style="gap: 0.25em">
+                <label for="">Chọn thông tin</label>
+                <SelectSystem />
             </div>
         </div>
     </div>
@@ -115,19 +133,31 @@
 <script>
 import button_system from '@/components/component_system/button_system/button_system.vue'
 import input_system from '@/components/component_system/input_system/input_system.vue'
-
+import select_system from '@/components/component_system/select_system/select_system.vue'
 export default {
     components : {
         ButtonSystem : button_system,
-        InputSystem : input_system
+        InputSystem : input_system,
+        SelectSystem : select_system
     },
 
     data () {
         return {
             value1 : null,
             foo : '',
+
+            options : [{
+                value: 'jack',
+                label: 'Jack',
+            }, {
+                value: 'lucy',
+                label: 'Lucy',
+            }, {
+                value: 'tom',
+                label: 'Tom',
+            }]
         }
-    }
+    },
 }
 </script>
 

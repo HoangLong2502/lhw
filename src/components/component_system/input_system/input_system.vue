@@ -6,22 +6,36 @@
             <div class="icon--search text-input__icon"></div>
             <input 
                 class="text-input__el w100" 
+                :class="validateInput ? 'border-error' : null"
                 :type="typeInput"
-                :placeholder="placeholderInput">
+                :placeholder="placeholderInput"
+                v-model="valueInput"
+                @change="valueInput === '' && requireInput ? validateInput = true : validateInput = false"
+                @keyup="updateInput">
+            <div
+                v-if="requireInput && valueInput === '' && validateInput"
+                class="p7 error align-l mt025">
+                Bạn đã nhập sai
+            </div>
         </div>
 
         <div 
-            v-if="typeInput === 'text' && !logoInput"
+            v-else-if="typeInput === 'text' && !logoInput"
             class="text-input--search w100">
             <input 
                 class="w100" :type="typeInput"
                 :placeholder="placeholderInput"
                 v-model="valueInput"
                 @keyup="updateInput">
+            <div
+                v-if="requireInput && valueInput === '' && validateInput"
+                class="p7 error align-l mt025">
+                Bạn đã nhập sai
+            </div>
         </div>
 
         <div 
-            v-else-if="typeInput === 'number'"
+            v-else-if="typeInput === 'money'"
             class="input-number w100">
             <a-input-number
                 class="item"
@@ -33,6 +47,7 @@
                 :parser="value => value.replace(/\$\s?|(,*)/g, '')"
             />
         </div>
+
     </div>
 </template>
 
@@ -70,36 +85,30 @@ export default {
         modelValue : String
     },
 
-    // watch : {
-    //     modelValue() {
-    //         this.$emit('input', this.modelValue)
-    //     }
-    // },
-
-    // computed: {
-    //     inputValue: {
-    //         get() {
-    //             return this.modelValue;
-    //         },
-    //         set(val) {
-    //             this.$emit('update:modelValue', val);
-    //             console.log(val);
-    //         }
-    //     }
-    // },
-
     methods: {
         updateInput () {
             this.$emit('update', this.valueInput)
-        }
+        },
+
+        handleValidateInput () {
+            this.valueInput === '' && this.requireInput ? this.validateInput = true : this.validateInput = false
+        },
+
+    },
+
+    watch : {
+        'valueInput' : function () {
+            this.handleValidateInput()
+        },
     },
 
     data () {
         return {
+            validateInput : false,
             value1 : 1000,
-            valueInput : ''
+            valueInput : '',
         }
-    }
+    },
 }
 </script>
 

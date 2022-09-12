@@ -276,6 +276,10 @@ p {
   border: 1px solid $c-border;
 }
 
+.border-error {
+  border: 1px solid $c-error !important;
+}
+
 .border-dashed {
   border: 1px dashed $c-border;
 }
